@@ -5,3 +5,5 @@
 /.vs
 /DnD.Domain/obj
 /DnD.Domain/bin/Debug/net7.0
+/DnD.Application/obj/Debug/net7.0
+/DnD.Application/obj
