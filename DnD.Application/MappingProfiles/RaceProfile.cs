@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using DnD.Application.Features.Race.Queries.GetAllRaces;
+using DnD.Domain;
 
 namespace DnD.Application.MappingProfiles
 {
@@ -6,7 +8,7 @@ namespace DnD.Application.MappingProfiles
     {
         public RaceProfile()
         {
-            // ToDo
+            CreateMap<RaceDto, Race>().ReverseMap();
         }
     }
 }

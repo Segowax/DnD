@@ -16,4 +16,8 @@
     <ProjectReference Include="..\DnD.Domain\DnD.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Race\Commands\" />
+  </ItemGroup>
+
 </Project>
