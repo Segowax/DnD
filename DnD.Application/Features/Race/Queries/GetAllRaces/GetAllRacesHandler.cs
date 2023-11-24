@@ -4,7 +4,7 @@ using MediatR;
 
 namespace DnD.Application.Features.Race.Queries.GetAllRaces
 {
-    public class GetAllRacesHandler : IRequestHandler<GetAllRacesQuery, IEnumerable<RaceDto>>
+    public class GetAllRacesHandler : IRequestHandler<GetAllRacesQuery, IEnumerable<GetAllRacesDto>>
     {
         private readonly IMapper _mapper;
         private readonly IRaceRepository _raceRepository;
@@ -15,11 +15,11 @@ namespace DnD.Application.Features.Race.Queries.GetAllRaces
             _raceRepository = raceRepository;
         }
 
-        public async Task<IEnumerable<RaceDto>> Handle(GetAllRacesQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<GetAllRacesDto>> Handle(GetAllRacesQuery request, CancellationToken cancellationToken)
         {
-            var result = await _raceRepository.GetAllAsync();
+            var result = await _raceRepository.GetAllAsync(cancellationToken);
 
-            return _mapper.Map<IEnumerable<RaceDto>>(result);
+            return _mapper.Map<IEnumerable<GetAllRacesDto>>(result);
         }
     }
 }

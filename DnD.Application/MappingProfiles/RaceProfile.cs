@@ -8,7 +8,8 @@ namespace DnD.Application.MappingProfiles
     {
         public RaceProfile()
         {
-            CreateMap<RaceDto, Race>().ReverseMap();
+            CreateMap<GetAllRacesDto, Race>();
+            CreateMap<GetRaceDetailsDto, Race>();
         }
     }
 }

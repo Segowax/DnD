@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using DnD.Application.Features.Equipment.Queries.GetAllEquipments;
+using DnD.Domain;
 
 namespace DnD.Application.MappingProfiles
 {
@@ -6,7 +8,7 @@ namespace DnD.Application.MappingProfiles
     {
         public EquipmentProfile()
         {
-            // ToDo       
+            CreateMap<Equipment, GetAllEquipmentsDto>().ReverseMap();
         }
     }
 }
