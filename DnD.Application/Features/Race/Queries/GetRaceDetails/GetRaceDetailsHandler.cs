@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
 using DnD.Application.Contracts.Persistence;
-using DnD.Application.Features.Race.Queries.GetAllRaces;
 using MediatR;
 
-namespace DnD.Application.Features.Race.Queries.GerRaceDetails
+namespace DnD.Application.Features.Race.Queries.GetRaceDetails
 {
     public class GetRaceDetailsHandler : IRequestHandler<GetRaceDetailsQuery, GetRaceDetailsDto>
     {

@@ -1,4 +1,4 @@
-﻿namespace DnD.Application.Features.Race.Queries.GetAllRaces
+﻿namespace DnD.Application.Features.Race.Queries.GetRaceDetails
 {
     public class GetRaceDetailsDto
     {
