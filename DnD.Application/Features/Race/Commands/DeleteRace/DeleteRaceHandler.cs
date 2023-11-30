@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DnD.Application.Contracts.Persistence;
+using DnD.Application.Exceptions;
 using MediatR;
 
 namespace DnD.Application.Features.Race.Commands.DeleteRace
@@ -18,6 +19,8 @@ namespace DnD.Application.Features.Race.Commands.DeleteRace
         public async Task<Unit> Handle(DeleteRaceCommand request, CancellationToken cancellationToken)
         {
             var dataToDelete = _mapper.Map<Domain.Race>(request);
+            if (dataToDelete == null)
+                throw new NotFoundException(nameof(Race), request.Guid);
             await _raceRepository.DeleteAsync(dataToDelete, cancellationToken);
 
             return Unit.Value;
