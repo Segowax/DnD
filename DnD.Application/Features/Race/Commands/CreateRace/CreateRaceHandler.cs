@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DnD.Application.Contracts.Persistence;
+using DnD.Application.Exceptions;
 using MediatR;
 
 namespace DnD.Application.Features.Race.Commands.CreateRace
@@ -16,6 +17,10 @@ namespace DnD.Application.Features.Race.Commands.CreateRace
         }
         public async Task<Unit> Handle(CreateRaceCommand request, CancellationToken cancellationToken)
         {
+            var validator = new CreateRaceCommandValidator(_raceRepository);
+            var validatorResult = await validator.ValidateAsync(request, cancellationToken);
+            if (!validatorResult.IsValid) throw new BadRequestException(nameof(CreateRaceHandler), validatorResult);
+
             var dataToCreate = _mapper.Map<Domain.Race>(request);
             await _raceRepository.CreateAsync(dataToCreate, cancellationToken);
 
