@@ -120,6 +120,12 @@
   <data name="Validator.AlreadyExists" xml:space="preserve">
     <value>{PropertyName} already exists</value>
   </data>
+  <data name="Validator.DoesNotExist" xml:space="preserve">
+    <value>{PropertyName} does not exist</value>
+  </data>
+  <data name="Validator.GreaterThanOrEqualTo" xml:space="preserve">
+    <value>{PropertyName} must be greater or equal to {ComparisonValue}</value>
+  </data>
   <data name="Validator.MaximumLength" xml:space="preserve">
     <value>{PropertyName} must be fewer than {MaxLength}</value>
   </data>

@@ -19,7 +19,7 @@ namespace DnD.Application.Features.Equipment.Commands.CreateEquipment
 
         public async Task<Unit> Handle(CreateEquipmentCommand request, CancellationToken cancellationToken)
         {
-            var validator = new CreateEquipmentCommandValidator();
+            var validator = new CreateEquipmentValidator(_equipmentRepository);
             var validatorResult = await validator.ValidateAsync(request, cancellationToken);
             if (!validatorResult.IsValid) throw new BadRequestException(nameof(CreateEquipmentHandler), validatorResult);
 

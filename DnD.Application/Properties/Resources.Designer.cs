@@ -70,6 +70,24 @@ namespace DnD.Application.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {PropertyName} does not exist.
+        /// </summary>
+        internal static string Validator_DoesNotExist {
+            get {
+                return ResourceManager.GetString("Validator.DoesNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {PropertyName} must be greater or equal to {ComparisonValue}.
+        /// </summary>
+        internal static string Validator_GreaterThanOrEqualTo {
+            get {
+                return ResourceManager.GetString("Validator.GreaterThanOrEqualTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {PropertyName} must be fewer than {MaxLength}.
         /// </summary>
         internal static string Validator_MaximumLength {

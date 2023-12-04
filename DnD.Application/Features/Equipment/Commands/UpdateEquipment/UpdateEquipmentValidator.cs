@@ -1,12 +1,17 @@
-﻿using DnD.Application.Properties;
+﻿using DnD.Application.Contracts.Persistence;
+using DnD.Application.Properties;
 using FluentValidation;
 
-namespace DnD.Application.Features.Equipment.Commands.CreateEquipment
+namespace DnD.Application.Features.Equipment.Commands.UpdateEquipment
 {
-    public class CreateEquipmentCommandValidator : AbstractValidator<CreateEquipmentCommand>
+    public class UpdateEquipmentValidator : AbstractValidator<UpdateEquipmentCommand>
     {
-        public CreateEquipmentCommandValidator()
+        private readonly IEquipmentRepository _equipmentRepository;
+
+        public UpdateEquipmentValidator(IEquipmentRepository equipmentRepository)
         {
+            _equipmentRepository = equipmentRepository;
+
             RuleFor(p => p.Name)
                 .NotEmpty().WithMessage(Resources.Validator_Required)
                 .NotNull().WithMessage(Resources.Validator_Required)
@@ -15,7 +20,7 @@ namespace DnD.Application.Features.Equipment.Commands.CreateEquipment
             RuleFor(p => p.Weight)
                 .NotEmpty().WithMessage(Resources.Validator_Required)
                 .NotNull().WithMessage(Resources.Validator_Required)
-                .GreaterThan(0);
+                .GreaterThanOrEqualTo(0).WithMessage(Resources.Validator_GreaterThanOrEqualTo);
 
             RuleFor(p => p.Description)
                 .NotEmpty().WithMessage(Resources.Validator_Required)

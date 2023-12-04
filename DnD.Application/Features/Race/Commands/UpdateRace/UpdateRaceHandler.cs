@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DnD.Application.Contracts.Persistence;
+using DnD.Application.Exceptions;
 using MediatR;
 
 namespace DnD.Application.Features.Race.Commands.UpdateRace
@@ -17,6 +18,10 @@ namespace DnD.Application.Features.Race.Commands.UpdateRace
 
         public async Task<Unit> Handle(UpdateRaceCommand request, CancellationToken cancellationToken)
         {
+            var validator = new UpdateRaceValidator(_raceRepsitory);
+            var validatorResult = await validator.ValidateAsync(request);
+            if (!validatorResult.IsValid) throw new BadRequestException(nameof(UpdateRaceHandler), validatorResult);
+
             var dataToUpdate = _mapper.Map<Domain.Race>(request);
             await _raceRepsitory.UpdateAsync(dataToUpdate, cancellationToken);
 

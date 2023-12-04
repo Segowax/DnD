@@ -17,7 +17,7 @@ namespace DnD.Application.Features.Race.Commands.CreateRace
         }
         public async Task<Unit> Handle(CreateRaceCommand request, CancellationToken cancellationToken)
         {
-            var validator = new CreateRaceCommandValidator(_raceRepository);
+            var validator = new CreateRaceValidator(_raceRepository);
             var validatorResult = await validator.ValidateAsync(request, cancellationToken);
             if (!validatorResult.IsValid) throw new BadRequestException(nameof(CreateRaceHandler), validatorResult);
 

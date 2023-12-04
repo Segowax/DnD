@@ -4,11 +4,11 @@ using FluentValidation;
 
 namespace DnD.Application.Features.Race.Commands.CreateRace
 {
-    public class CreateRaceCommandValidator : AbstractValidator<CreateRaceCommand>
+    public class CreateRaceValidator : AbstractValidator<CreateRaceCommand>
     {
         private readonly IRaceRepository _raceRepository;
 
-        public CreateRaceCommandValidator(IRaceRepository raceRepository)
+        public CreateRaceValidator(IRaceRepository raceRepository)
         {
             _raceRepository = raceRepository;
 
@@ -22,6 +22,6 @@ namespace DnD.Application.Features.Race.Commands.CreateRace
         }
 
         private async Task<bool> IsRaceUnique(CreateRaceCommand createRaceCommand, CancellationToken cancellationToken) =>
-            await _raceRepository.IsRaceUnique(createRaceCommand.Name, cancellationToken);
+            await _raceRepository.IsItemUnique(createRaceCommand.Name, cancellationToken);
     }
 }
