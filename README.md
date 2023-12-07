@@ -1,2 +1,2 @@
 # DnD
-D&D random character generator ed 3.5, 5.0
+D&D random character generator for ed 3.5 or 5.0
