@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DnD.Application\DnD.Application.csproj" />
+    <ProjectReference Include="..\DnD.Common\DnD.Common.csproj" />
   </ItemGroup>
 
 </Project>
