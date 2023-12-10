@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DnD.Persistence.Configurations
 {
-    public class DescriptionConfiguration : IEntityTypeConfiguration<Description>
+    public class CharacterConfiguration : IEntityTypeConfiguration<Character>
     {
-        public void Configure(EntityTypeBuilder<Description> builder)
+        public void Configure(EntityTypeBuilder<Character> builder)
         {
             // Configurations
         }

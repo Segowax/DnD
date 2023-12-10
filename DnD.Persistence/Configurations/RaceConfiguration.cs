@@ -1,4 +1,5 @@
 ﻿using DnD.Domain;
+using DnD.Persistence.DataSeed;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -8,14 +9,10 @@ namespace DnD.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<Race> builder)
         {
-            builder.HasData(new Race()
-            {
-                Id = 1,
-                Guid = Guid.NewGuid(),
-                Name = "Human",
-                CreatedAt = new DateTime(2000, 10, 10),
-                UpdatedAt = null,
-            });
+            // Configurations
+
+            // Data Seed
+            builder.RaceDataSeed();
         }
     }
 }

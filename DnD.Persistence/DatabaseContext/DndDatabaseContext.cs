@@ -18,7 +18,11 @@ namespace DnD.Persistence.DatabaseContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Data to seed
             modelBuilder.ApplyConfiguration(new RaceConfiguration());
+            modelBuilder.ApplyConfiguration(new EquipmentConfiguration());
+            // Data without seed
+            modelBuilder.ApplyConfiguration(new DescriptionConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
