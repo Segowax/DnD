@@ -32,7 +32,7 @@ namespace DnD.Application.Features.Equipment.Commands.CreateEquipment
         }
 
         private async Task<bool> IsEquipmentUnique(CreateEquipmentCommand command, CancellationToken cancellationToken) =>
-            await _equipmentRepository.IsItemUnique(command.Name, cancellationToken);
+            await _equipmentRepository.IsEquipmentUnique(command.Name, cancellationToken);
 
     }
 }

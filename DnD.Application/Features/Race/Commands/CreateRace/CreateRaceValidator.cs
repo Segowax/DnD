@@ -22,6 +22,6 @@ namespace DnD.Application.Features.Race.Commands.CreateRace
         }
 
         private async Task<bool> IsRaceUnique(CreateRaceCommand createRaceCommand, CancellationToken cancellationToken) =>
-            await _raceRepository.IsItemUnique(createRaceCommand.Name, cancellationToken);
+            await _raceRepository.IsRaceUnique(createRaceCommand.Name, cancellationToken);
     }
 }
