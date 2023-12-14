@@ -5,7 +5,7 @@ namespace DnD.Application.Contracts.Persistence
 {
     public interface IEquipmentRepository : IGenericRepository<Equipment>
     {
-        Task<bool> IsEquipmentUnique(string itemName, CancellationToken cancellation = default);
+        Task<bool> IsEquipmentNameUnique(string name, CancellationToken cancellation = default);
     }
 }
 

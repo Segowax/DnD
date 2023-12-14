@@ -28,11 +28,11 @@ namespace DnD.Application.Features.Equipment.Commands.CreateEquipment
                 .MaximumLength(250).WithMessage(Resources.Validator_MaximumLength);
 
             RuleFor(p => p)
-                .MustAsync(IsEquipmentUnique).WithMessage(Resources.Validator_AlreadyExists);
+                .MustAsync(IsEquipmentNameUnique).WithMessage(Resources.Validator_AlreadyExists);
         }
 
-        private async Task<bool> IsEquipmentUnique(CreateEquipmentCommand command, CancellationToken cancellationToken) =>
-            await _equipmentRepository.IsEquipmentUnique(command.Name, cancellationToken);
+        private async Task<bool> IsEquipmentNameUnique(CreateEquipmentCommand command, CancellationToken cancellationToken) =>
+            await _equipmentRepository.IsEquipmentNameUnique(command.Name, cancellationToken);
 
     }
 }

@@ -1,5 +1,7 @@
-﻿using DnD.Application.Contracts.Persistence.Common;
+﻿using DnD.Application.Contracts.Persistence;
+using DnD.Application.Contracts.Persistence.Common;
 using DnD.Persistence.DatabaseContext;
+using DnD.Persistence.Repositories;
 using DnD.Persistence.Repositories.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +20,8 @@ namespace DnD.Persistence.IoC
             });
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IEquipmentRepository, EquipmentRepository>();
+            services.AddScoped<IRaceRepository, RaceRepository>();
 
             return services;
         }

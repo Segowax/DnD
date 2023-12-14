@@ -5,6 +5,6 @@ namespace DnD.Application.Contracts.Persistence
 {
     public interface IRaceRepository : IGenericRepository<Race>
     {
-        Task<bool> IsRaceUnique(string raceName, CancellationToken cancellationToken = default);
+        Task<bool> IsRaceNameUnique(string name, CancellationToken cancellationToken = default);
     }
 }

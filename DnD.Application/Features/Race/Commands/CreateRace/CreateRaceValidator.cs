@@ -18,10 +18,10 @@ namespace DnD.Application.Features.Race.Commands.CreateRace
                 .MaximumLength(50).WithMessage(Resources.Validator_MaximumLength);
 
             RuleFor(p => p)
-                .MustAsync(IsRaceUnique).WithMessage(Resources.Validator_AlreadyExists);
+                .MustAsync(IsRaceNameUnique).WithMessage(Resources.Validator_AlreadyExists);
         }
 
-        private async Task<bool> IsRaceUnique(CreateRaceCommand createRaceCommand, CancellationToken cancellationToken) =>
-            await _raceRepository.IsRaceUnique(createRaceCommand.Name, cancellationToken);
+        private async Task<bool> IsRaceNameUnique(CreateRaceCommand createRaceCommand, CancellationToken cancellationToken) =>
+            await _raceRepository.IsRaceNameUnique(createRaceCommand.Name, cancellationToken);
     }
 }
