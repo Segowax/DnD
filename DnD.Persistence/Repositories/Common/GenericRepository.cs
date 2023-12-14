@@ -32,12 +32,12 @@ namespace DnD.Persistence.Repositories.Common
         }
 
         public async Task<IReadOnlyList<T>> GetAllAsync(CancellationToken cancellationToken = default) =>
-            await _context.Set<T>().ToListAsync();
+            await _context.Set<T>().AsNoTracking().ToListAsync();
 
         public async Task<T?> GetByGuidAsync(Guid guid, CancellationToken cancellationToken = default) =>
-            await _context.Set<T>().FirstOrDefaultAsync(x => x.Guid.Equals(guid), cancellationToken);
+            await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(x => x.Guid.Equals(guid), cancellationToken);
 
         public async Task<bool> IsItemExistAsync(Guid guid, CancellationToken cancellationToken = default) =>
-            await _context.Set<T>().AnyAsync(x => x.Guid.Equals(guid), cancellationToken);
+            await _context.Set<T>().AsNoTracking().AnyAsync(x => x.Guid.Equals(guid), cancellationToken);
     }
 }

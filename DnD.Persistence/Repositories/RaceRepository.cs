@@ -11,6 +11,6 @@ namespace DnD.Persistence.Repositories
         public RaceRepository(DndDatabaseContext context) : base(context) { }
 
         public async Task<bool> IsRaceNameUnique(string name, CancellationToken cancellationToken = default) =>
-            !(await _context.Races.AnyAsync(x => x.Name.Equals(name), cancellationToken));
+            !(await _context.Races.AsNoTracking().AnyAsync(x => x.Name.Equals(name), cancellationToken));
     }
 }

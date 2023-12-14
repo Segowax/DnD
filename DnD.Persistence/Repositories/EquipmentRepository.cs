@@ -11,7 +11,7 @@ namespace DnD.Persistence.Repositories
         public EquipmentRepository(DndDatabaseContext context) : base(context) { }
 
         public async Task<bool> IsEquipmentNameUnique(string name, CancellationToken cancellationToken = default) =>
-            !(await _context.Equipments.AnyAsync(x => x.Name.Equals(name), cancellationToken));
+            !(await _context.Equipments.AsNoTracking().AnyAsync(x => x.Name.Equals(name), cancellationToken));
 
     }
 }
