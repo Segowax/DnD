@@ -20,6 +20,10 @@ namespace DnD.Persistence.IoC
             });
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IAbilityScoresRepository, AbilityScoresRepository>();
+            services.AddScoped<ICharacterRepository, CharacterRepository>();
+            services.AddScoped<IClassRepository, ClassRepository>();
+            services.AddScoped<IDescriptionRepository, DescriptionRepository>();
             services.AddScoped<IEquipmentRepository, EquipmentRepository>();
             services.AddScoped<IRaceRepository, RaceRepository>();
 

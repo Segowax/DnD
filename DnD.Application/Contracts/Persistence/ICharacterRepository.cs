@@ -5,7 +5,7 @@ namespace DnD.Application.Contracts.Persistence
 {
     public interface ICharacterRepository : IGenericRepository<Character>
     {
-
+        Task CreateRandomCharacter();
     }
 }
 
