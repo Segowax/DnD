@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnD.Persistence", "DnD.Pers
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnD.Common", "DnD.Common\DnD.Common.csproj", "{D9BDC52D-DBC5-4B13-8908-6BB57593DD1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnD.Infrastructure", "DnD.Infrastructure\DnD.Infrastructure.csproj", "{72D66186-73D1-4CF1-8B6B-33C06EFF96DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D9BDC52D-DBC5-4B13-8908-6BB57593DD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9BDC52D-DBC5-4B13-8908-6BB57593DD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9BDC52D-DBC5-4B13-8908-6BB57593DD1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D66186-73D1-4CF1-8B6B-33C06EFF96DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D66186-73D1-4CF1-8B6B-33C06EFF96DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D66186-73D1-4CF1-8B6B-33C06EFF96DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D66186-73D1-4CF1-8B6B-33C06EFF96DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{1F46A2DD-E9D0-430C-9EB0-6534D3265A85} = {AED16801-9F62-489B-A9DB-4BB45DFE0595}
 		{99C808D1-0027-4ACB-B5A6-F0D8B82067BA} = {3112034A-50B3-4A2B-A174-02586199D9E6}
 		{D9BDC52D-DBC5-4B13-8908-6BB57593DD1E} = {AED16801-9F62-489B-A9DB-4BB45DFE0595}
+		{72D66186-73D1-4CF1-8B6B-33C06EFF96DA} = {3112034A-50B3-4A2B-A174-02586199D9E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F9F476C-DDA7-41DC-9EBD-D6E306AAF112}

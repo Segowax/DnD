@@ -12,3 +12,11 @@
 /DnD.Persistence/bin/Debug/net7.0
 /DnD.Common/obj
 /DnD.Common/bin/Debug/net7.0
+/DnD.Infrastructure/bin/Debug/net7.0
+/DnD.Infrastructure/obj/Debug/net7.0
+/DnD.Infrastructure/obj
+/DnD.Application/bin/Release/net7.0
+/DnD.Common/bin/Release/net7.0
+/DnD.Domain/bin/Release/net7.0
+/DnD.Infrastructure/bin/Release/net7.0
+/DnD.Persistence/bin/Release/net7.0
