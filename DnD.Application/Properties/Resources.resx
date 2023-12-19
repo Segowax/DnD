@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Logger.Debug.EndHandler" xml:space="preserve">
+    <value>Succesfuly end {0} request for {1} - {2}</value>
+  </data>
+  <data name="Logger.Debug.StartHandler" xml:space="preserve">
+    <value>Starting {0} request for {1} - {2}</value>
+  </data>
+  <data name="Logger.Warning.Validator" xml:space="preserve">
+    <value>Validation errors in {0} request for {1} - {2}</value>
+  </data>
   <data name="Validator.AlreadyExists" xml:space="preserve">
     <value>{PropertyName} already exists</value>
   </data>

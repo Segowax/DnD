@@ -61,6 +61,33 @@ namespace DnD.Application.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Succesfuly end {0} request for {1} - {2}.
+        /// </summary>
+        internal static string Logger_Debug_EndHandler {
+            get {
+                return ResourceManager.GetString("Logger.Debug.EndHandler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting {0} request for {1} - {2}.
+        /// </summary>
+        internal static string Logger_Debug_StartHandler {
+            get {
+                return ResourceManager.GetString("Logger.Debug.StartHandler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validation errors in {0} request for {1} - {2}.
+        /// </summary>
+        internal static string Logger_Warning_Validator {
+            get {
+                return ResourceManager.GetString("Logger.Warning.Validator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {PropertyName} already exists.
         /// </summary>
         internal static string Validator_AlreadyExists {
