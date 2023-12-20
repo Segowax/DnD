@@ -20,3 +20,4 @@
 /DnD.Domain/bin/Release/net7.0
 /DnD.Infrastructure/bin/Release/net7.0
 /DnD.Persistence/bin/Release/net7.0
+/DnD.Application/DnD.Application.csproj.user

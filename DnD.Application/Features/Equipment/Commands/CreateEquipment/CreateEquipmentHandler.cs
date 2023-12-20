@@ -36,7 +36,7 @@ namespace DnD.Application.Features.Equipment.Commands.CreateEquipment
 
             var dataToCreate = _mapper.Map<Domain.Equipment>(request);
             await _equipmentRepository.CreateAsync(dataToCreate, cancellationToken);
-            _logger.LogDebug(Resources.Logger_Debug_EndHandler, nameof(Domain.Equipment), request.Name);
+            _logger.LogDebug(Resources.Logger_Debug_EndHandler, nameof(Crud.create), nameof(Domain.Equipment), request.Name);
 
             return Unit.Value;
         }

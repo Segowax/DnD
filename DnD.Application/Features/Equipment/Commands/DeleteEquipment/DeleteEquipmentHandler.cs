@@ -28,16 +28,20 @@ namespace DnD.Application.Features.Equipment.Commands.DeleteEquipment
             _logger.LogDebug(Resources.Logger_Debug_StartHandler, nameof(Crud.delete), nameof(Domain.Equipment), request.Guid);
             var validator = new DeleteEquipmentValidator();
             var validatorResult = await validator.ValidateAsync(request, cancellationToken);
-            if (!validatorResult.IsValid) throw new BadRequestException(nameof(DeleteEquipmentHandler), validatorResult);
+            if (!validatorResult.IsValid)
+            {
+                _logger.LogWarning(Resources.Logger_Warning_Validator, nameof(Crud.delete), nameof(Domain.Equipment), request.Guid);
+                throw new BadRequestException(nameof(DeleteEquipmentHandler), validatorResult);
+            }
 
             var dataToDelete = _mapper.Map<Domain.Equipment>(request);
             if (dataToDelete == null)
             {
-                _logger.LogWarning(Resources.Logger_Warning_Validator, nameof(Crud.create), nameof(Domain.Equipment), request.Guid);
-                throw new NotFoundException(nameof(Race), request.Guid);
+                _logger.LogWarning(Resources.Logger_Warning_Null, nameof(Crud.delete), nameof(Domain.Equipment), request.Guid);
+                throw new NotFoundException(nameof(Domain.Equipment), request.Guid);
             }
             await _equipmentRepository.DeleteAsync(dataToDelete, cancellationToken);
-            _logger.LogDebug(Resources.Logger_Debug_EndHandler, nameof(Domain.Equipment), request.Guid);
+            _logger.LogDebug(Resources.Logger_Debug_EndHandler, nameof(Crud.delete), nameof(Domain.Equipment), request.Guid);
 
             return Unit.Value;
         }

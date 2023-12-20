@@ -123,6 +123,9 @@
   <data name="Logger.Debug.StartHandler" xml:space="preserve">
     <value>Starting {0} request for {1} - {2}</value>
   </data>
+  <data name="Logger.Warning.Null" xml:space="preserve">
+    <value>Object is null in {0} request for {1} - {2}</value>
+  </data>
   <data name="Logger.Warning.Validator" xml:space="preserve">
     <value>Validation errors in {0} request for {1} - {2}</value>
   </data>

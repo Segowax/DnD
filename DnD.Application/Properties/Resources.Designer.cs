@@ -79,6 +79,15 @@ namespace DnD.Application.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Object is null in {0} request for {1} - {2}.
+        /// </summary>
+        internal static string Logger_Warning_Null {
+            get {
+                return ResourceManager.GetString("Logger.Warning.Null", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Validation errors in {0} request for {1} - {2}.
         /// </summary>
         internal static string Logger_Warning_Validator {
