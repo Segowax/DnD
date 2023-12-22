@@ -21,3 +21,8 @@
 /DnD.Infrastructure/bin/Release/net7.0
 /DnD.Persistence/bin/Release/net7.0
 /DnD.Application/DnD.Application.csproj.user
+/DnD.Api/bin/Debug/net7.0
+/DnD.Api/obj
+/DnD.Api/Properties
+/DnD.Api/DnD.Api.csproj.user
+/DnD.Api/appsettings.Development.json
