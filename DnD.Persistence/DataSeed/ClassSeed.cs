@@ -11,7 +11,7 @@ namespace DnD.Persistence.DataSeed
             {
                 Id = 1,
                 Guid = Guid.NewGuid(),
-                CreatedAt = new DateTime(2000, 10, 10),
+                CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Warrior",
             });

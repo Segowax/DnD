@@ -15,13 +15,18 @@ namespace DnD.Persistence.DatabaseContext
         public DbSet<Description> Descriptions { get; set; }
         public DbSet<Equipment> Equipments { get; set; }
         public DbSet<Race> Races { get; set; }
+        public DbSet<WeaponProperty> WeaponProperties { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Data to seed
-            modelBuilder.ApplyConfiguration(new RaceConfiguration());
             modelBuilder.ApplyConfiguration(new EquipmentConfiguration());
+            modelBuilder.ApplyConfiguration(new RaceConfiguration());
+            modelBuilder.ApplyConfiguration(new WeaponPropertyConfiguration());
             // Data without seed
+            modelBuilder.ApplyConfiguration(new AbilityScoresConfiguration());
+            modelBuilder.ApplyConfiguration(new CharacterConfiguration());
+            modelBuilder.ApplyConfiguration(new ClassConfiguration());
             modelBuilder.ApplyConfiguration(new DescriptionConfiguration());
 
             base.OnModelCreating(modelBuilder);

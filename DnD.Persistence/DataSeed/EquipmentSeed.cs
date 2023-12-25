@@ -16,10 +16,10 @@ namespace DnD.Persistence.DataSeed
                 Name = "BattleAxe",
                 Cost = 1000,
                 Damage = "1d8",
-                Properties = { WeaponProperties.Versatile },
+                // Properties = { WeaponProperties.Versatile },
                 Weight = 4,
                 Description = "-",
-                CreatedAt = new DateTime(2000, 10, 10),
+                CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null
             });
 
