@@ -5,11 +5,6 @@ namespace DnD.Domain
 {
     public class Equipment : BaseEntity
     {
-        public Equipment()
-        {
-            Properties = new HashSet<WeaponProperty>();
-        }
-
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public float Weight { get; set; }
