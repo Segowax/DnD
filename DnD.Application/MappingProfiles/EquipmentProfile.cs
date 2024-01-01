@@ -12,11 +12,11 @@ namespace DnD.Application.MappingProfiles
     {
         public EquipmentProfile()
         {
-            CreateMap<GetAllEquipmentsDto, Equipment>();
-            CreateMap<GetEquipmentDetailsDto, Equipment>();
-            CreateMap<Equipment, UpdateEquipmentCommand>();
-            CreateMap<Equipment, CreateEquipmentCommand>();
-            CreateMap<Equipment, DeleteEquipmentCommand>();
+            CreateMap<Equipment, GetAllEquipmentsDto>();
+            CreateMap<Equipment, GetEquipmentDetailsDto>();
+            CreateMap<UpdateEquipmentCommand, Equipment>();
+            CreateMap<CreateEquipmentCommand, Equipment>();
+            CreateMap<DeleteEquipmentCommand, Equipment>();
         }
     }
 }

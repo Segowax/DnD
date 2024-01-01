@@ -12,11 +12,11 @@ namespace DnD.Application.MappingProfiles
     {
         public RaceProfile()
         {
-            CreateMap<GetAllRacesDto, Race>();
-            CreateMap<GetRaceDetailsDto, Race>();
-            CreateMap<Race, CreateRaceCommand>();
-            CreateMap<Race, UpdateRaceCommand>();
-            CreateMap<Race, DeleteRaceCommand>();
+            CreateMap<Race, GetAllRacesDto>();
+            CreateMap<Race, GetRaceDetailsDto>();
+            CreateMap<CreateRaceCommand, Race>();
+            CreateMap<UpdateRaceCommand, Race>();
+            CreateMap<DeleteRaceCommand, Race>();
         }
     }
 }
