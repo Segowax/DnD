@@ -35,11 +35,14 @@ namespace DnD.Persistence.DatabaseContext
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             foreach (var entry in base.ChangeTracker.Entries<BaseEntity>()
-                .Where(q => q.State == EntityState.Added || q.State == EntityState.Modified))
+                .Where(q => q.State is EntityState.Added or EntityState.Modified))
             {
                 entry.Entity.UpdatedAt = DateTime.UtcNow;
                 if (entry.State == EntityState.Added)
+                {
                     entry.Entity.CreatedAt = DateTime.UtcNow;
+                    entry.Entity.Guid = Guid.NewGuid();
+                }
             }
 
             return base.SaveChangesAsync(cancellationToken);
