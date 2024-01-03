@@ -1,4 +1,6 @@
 ﻿using DnD.Application.Features.Equipment.Commands.CreateEquipment;
+using DnD.Application.Features.Equipment.Commands.DeleteEquipment;
+using DnD.Application.Features.Equipment.Commands.UpdateEquipment;
 using DnD.Application.Features.Equipment.Queries.GetAllEquipments;
 using DnD.Application.Features.Equipment.Queries.GetEquipmentDetails;
 using MediatR;
@@ -36,15 +38,13 @@ namespace DnD.Api.Controllers
             await _mediator.Send(value);
 
         // PUT api/<EquipmentController>/6962a553-a2af-42e6-90e4-7a415f2cfb31
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        [HttpPut]
+        public async Task Put([FromBody] UpdateEquipmentCommand value) =>
+            await _mediator.Send(value);
 
         // DELETE api/<EquipmentController>/6962a553-a2af-42e6-90e4-7a415f2cfb31
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        [HttpDelete]
+        public async Task Delete(DeleteEquipmentCommand value) =>
+            await _mediator.Send(value);
     }
 }

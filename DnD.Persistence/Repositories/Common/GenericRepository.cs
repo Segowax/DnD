@@ -22,7 +22,9 @@ namespace DnD.Persistence.Repositories.Common
 
         public async Task DeleteAsync(T entity, CancellationToken cancellationToken = default)
         {
-            _context.Remove(entity);
+            var entityToDelete = await _context.Set<T>().AsNoTracking()
+                .FirstAsync(x => x.Guid.Equals(entity.Guid), cancellationToken);
+            _context.Remove(entityToDelete);
             await _context.SaveChangesAsync(cancellationToken);
         }
         public async Task UpdateAsync(T entity, CancellationToken cancellationToken = default)
@@ -32,7 +34,7 @@ namespace DnD.Persistence.Repositories.Common
         }
 
         public async Task<IReadOnlyList<T>> GetAllAsync(CancellationToken cancellationToken = default) =>
-            await _context.Set<T>().AsNoTracking().ToListAsync();
+            await _context.Set<T>().AsNoTracking().ToListAsync(cancellationToken);
 
         public async Task<T?> GetByGuidAsync(Guid guid, CancellationToken cancellationToken = default) =>
             await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(x => x.Guid.Equals(guid), cancellationToken);
