@@ -10,7 +10,7 @@ namespace DnD.Persistence.Configurations
         public void Configure(EntityTypeBuilder<Equipment> builder)
         {
             // Configurations
-
+            builder.HasIndex(x => x.Guid).IsUnique();
             // Data Seed
             builder.EquipmentDataSeed();
         }
