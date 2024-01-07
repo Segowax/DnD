@@ -11,6 +11,7 @@ namespace DnD.Persistence.Configurations
         {
             // Configurations
             builder.HasIndex(x => x.Guid).IsUnique();
+            builder.Property(x => x.Guid).ValueGeneratedOnAdd();
             // Data Seed
             builder.EquipmentDataSeed();
         }

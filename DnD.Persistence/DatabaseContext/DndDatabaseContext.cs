@@ -39,10 +39,7 @@ namespace DnD.Persistence.DatabaseContext
             {
                 entry.Entity.UpdatedAt = DateTime.UtcNow;
                 if (entry.State == EntityState.Added)
-                {
                     entry.Entity.CreatedAt = DateTime.UtcNow;
-                    entry.Entity.Guid = Guid.NewGuid();
-                }
             }
 
             return base.SaveChangesAsync(cancellationToken);
