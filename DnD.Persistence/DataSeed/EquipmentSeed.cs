@@ -12,7 +12,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new Equipment()
             {
                 Id = 1,
-                Guid = new Guid("0d4dfedd-2134-42cc-ad04-48bc67c9917a"),
+                Guid = new Guid("2fbe30b3-5224-4d3e-880a-226f128ff24e"),
                 Name = "BattleAxe",
                 Cost = 1000,
                 Damage = "1d8",

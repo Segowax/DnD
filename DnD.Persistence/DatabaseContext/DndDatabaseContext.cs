@@ -29,6 +29,13 @@ namespace DnD.Persistence.DatabaseContext
             modelBuilder.ApplyConfiguration(new ClassConfiguration());
             modelBuilder.ApplyConfiguration(new DescriptionConfiguration());
 
+            foreach (var property in modelBuilder.Model.GetEntityTypes()
+                         .SelectMany(t => t.GetProperties())
+                         .Where(p => p.ClrType == typeof(Guid)))
+            {
+                property.SetDefaultValueSql("NEWID()");
+            }
+
             base.OnModelCreating(modelBuilder);
         }
 

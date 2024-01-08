@@ -10,7 +10,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new Class()
             {
                 Id = 1,
-                Guid = new Guid("e1f6fe37-665a-4ef4-ae07-d852de1dadd6"),
+                Guid = new Guid("2d927dc9-9568-4554-9b42-2aae2a026409"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Warrior",

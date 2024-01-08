@@ -10,7 +10,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 1,
-                Guid = new Guid("e401be37-3cb8-4339-9430-3a34a6fef085"),
+                Guid = new Guid("13e4e1c8-9548-44ec-bd09-4c1c2ca29257"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Ammunition",
@@ -20,7 +20,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 2,
-                Guid = new Guid("b76727ec-fcd0-4eb2-828c-899816c189d8"),
+                Guid = new Guid("934fc7fe-1fcc-4600-a7b0-46dd1624b953"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Finese",
@@ -30,7 +30,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 3,
-                Guid = new Guid("b7ab8d98-23bb-41a5-94b5-8a9c76f68984"),
+                Guid = new Guid("a379b070-07f0-4ea3-b06d-4effb3eb5caa"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Heavy",
@@ -40,7 +40,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 4,
-                Guid = new Guid("2df462bf-bd85-48b0-aa92-f85effa01699"),
+                Guid = new Guid("e47f5ba5-4830-435c-9041-12f8af485396"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Light",
@@ -50,7 +50,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 5,
-                Guid = new Guid("67b269a2-3e40-45f7-b36f-ca08ce15f6cb"),
+                Guid = new Guid("c79679dc-59ab-4c88-afeb-a9f65fdaabcb"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Loading",
@@ -60,7 +60,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 6,
-                Guid = new Guid("daa57348-ca21-4341-85c4-056053229f55"),
+                Guid = new Guid("90e5449b-9d24-4618-a40c-26731204a3dc"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Range",
@@ -70,7 +70,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 7,
-                Guid = new Guid("d3b01956-8a13-408d-8bc4-0107679440ab"),
+                Guid = new Guid("9d941ecd-e212-4852-8231-f040f15f11f5"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Reach",
@@ -80,7 +80,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 8,
-                Guid = new Guid("953e1537-beb8-4050-ab3a-5af85a7cf926"),
+                Guid = new Guid("43790d45-7251-45df-ae26-9107345b495d"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Special",
@@ -90,7 +90,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 9,
-                Guid = new Guid("a4b19609-98b1-4971-81ca-ec68ecfaf838"),
+                Guid = new Guid("395fd1d3-4a34-44da-b50c-74bc85149e47"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Thrown",
@@ -100,7 +100,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 10,
-                Guid = new Guid("c63d671d-e816-4ba4-ab3a-96872c7f7fd9"),
+                Guid = new Guid("5088da03-2e65-4c63-8a13-27c31d2b7593"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "TwoHanded",
@@ -110,7 +110,7 @@ namespace DnD.Persistence.DataSeed
             builder.HasData(new WeaponProperty
             {
                 Id = 11,
-                Guid = new Guid("cfac124a-0ee0-432b-8aad-e43ddd40e1e0"),
+                Guid = new Guid("523b4c22-aa24-4aef-962f-7831ec531360"),
                 CreatedAt = new DateTime(2000, 10, 10).ToUniversalTime(),
                 UpdatedAt = null,
                 Name = "Versatile",
