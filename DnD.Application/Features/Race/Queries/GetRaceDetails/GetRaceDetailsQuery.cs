@@ -2,5 +2,5 @@
 
 namespace DnD.Application.Features.Race.Queries.GetRaceDetails
 {
-    public record class GetRaceDetailsQuery(Guid Guid) : IRequest<GetRaceDetailsDto>;
+    public record GetRaceDetailsQuery(Guid Guid) : IRequest<GetRaceDetailsDto>;
 }
