@@ -1,4 +1,4 @@
-﻿namespace Generator.Common
+﻿namespace Common
 {
     public abstract class Abilities
     {

@@ -5,3 +5,5 @@
 /.vs
 /src/*/obj
 /src/*/bin
+/src/*/*/bin
+/src/*/*/obj

@@ -1,4 +1,4 @@
-﻿namespace Generator.Interfaces
+﻿namespace Common.Interfaces
 {
     public interface ICharacterRace
     {
