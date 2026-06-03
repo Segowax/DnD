@@ -3,7 +3,7 @@
     public interface ICharacter
     {
         string Name { get; }
-        ICharacterClass CharacterClass { get; }
-        ICharacterRace CharacterRace { get; }
+        ICharacterSpecies Species { get; }
+        ICharacterClass Class { get; }
     }
 }
