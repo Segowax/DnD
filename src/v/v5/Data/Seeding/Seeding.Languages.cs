@@ -5,13 +5,11 @@ namespace v5.Data.Seeding
 {
     public static partial class Seeding
     {
-        public static DbContextOptionsBuilder SeedLanguages(this DbContextOptionsBuilder builder)
+        public static DbContext SeedLanguages(this DbContext ctx)
         {
-            builder.UseSeeding((context, _) =>
+            if (!ctx.Set<Languages>().Any())
             {
-                if (!context.Set<Languages>().Any())
-                {
-                    context.Set<Languages>().AddRange(
+                ctx.Set<Languages>().AddRange(
                         new Languages { Name = "Abyssal" },
                         new Languages { Name = "Celestial" },
                         new Languages { Name = "Common Sign Language" },
@@ -31,11 +29,10 @@ namespace v5.Data.Seeding
                         new Languages { Name = "Thieves' Cant" },
                         new Languages { Name = "Undercommon" }
                     );
-                    context.SaveChanges();
-                }
-            });
+                ctx.SaveChanges();
+            }
 
-            return builder;
+            return ctx;
         }
     }
 }

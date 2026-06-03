@@ -1,5 +1,6 @@
 ﻿using Common.Domain;
 using Microsoft.EntityFrameworkCore;
+using v5.Data.Configurations;
 using v5.Data.Domain;
 using v5.Data.Seeding;
 
@@ -16,8 +17,21 @@ namespace v5.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=v5.db")
-                .SeedLanguages()
-                .SeedSpecies();
+                .UseSeeding((context, _) =>
+                {
+                    context
+                        .SeedLanguages()
+                        .SeedSpecies();
+                });
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder
+                .ConfigureLanguages()
+                .ConfigureSpecies();
         }
     }
 
