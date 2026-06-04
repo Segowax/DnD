@@ -1,11 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using v5.Data.Domain;
+﻿using Database.v5.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace v5.Data.Seeding
 {
-    public static partial class Seeding
+    internal static partial class Seeding
     {
-        public static DbContext SeedSpecies(this DbContext context)
+        internal static DbContext SeedSpecies(this DbContext context)
         {
             if (!context.Set<Species>().Any())
             {

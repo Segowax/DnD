@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using v5.Data.Domain;
+﻿using Database.v5.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace v5.Data.Configurations
 {

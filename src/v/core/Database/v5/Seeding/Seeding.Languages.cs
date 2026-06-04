@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace v5.Data.Seeding
 {
-    public static partial class Seeding
+    internal static partial class Seeding
     {
-        public static DbContext SeedLanguages(this DbContext ctx)
+        internal static DbContext SeedLanguages(this DbContext ctx)
         {
             if (!ctx.Set<Languages>().Any())
             {

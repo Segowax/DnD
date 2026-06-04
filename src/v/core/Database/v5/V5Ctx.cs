@@ -1,18 +1,18 @@
 ﻿using Common.Domain;
+using Database.v5.Domain;
 using Microsoft.EntityFrameworkCore;
 using v5.Data.Configurations;
-using v5.Data.Domain;
 using v5.Data.Seeding;
 
-namespace v5.Data
+namespace Database.v5
 {
-    public class DnDContext : DbContext
+    public class V5Ctx : DbContext
     {
         public DbSet<Languages> Languages { get; set; }
         public DbSet<Species> AvailableSpecies { get; set; }
 
-        public DnDContext() { }
-        public DnDContext(DbContextOptions<DnDContext> options) : base(options) { }
+        public V5Ctx() { }
+        public V5Ctx(DbContextOptions<V5Ctx> options) : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
