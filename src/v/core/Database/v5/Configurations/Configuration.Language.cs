@@ -1,4 +1,4 @@
-﻿using Common.Domain;
+﻿using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace v5.Data.Configurations

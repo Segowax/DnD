@@ -1,6 +1,4 @@
-﻿using Common.Domain;
-
-namespace Database.v5.Domain
+﻿namespace Domain.v5
 {
     public class Species : Base
     {

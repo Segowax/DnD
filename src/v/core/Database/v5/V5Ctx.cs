@@ -1,5 +1,5 @@
-﻿using Common.Domain;
-using Database.v5.Domain;
+﻿using Domain;
+using Domain.v5;
 using Microsoft.EntityFrameworkCore;
 using v5.Data.Configurations;
 using v5.Data.Seeding;
