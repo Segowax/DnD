@@ -4,6 +4,6 @@ namespace Database
 {
     public interface IDbContextFactory
     {
-        DbContext CreateContext(string version);
+        DbContext GetContext(string version);
     }
 }

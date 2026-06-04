@@ -14,14 +14,17 @@ namespace Database
             _serviceProvider = serviceProvider;
         }
 
-        public DbContext CreateContext(string version)
+        public DbContext GetContext(string version)
         {
-            return version switch
+            var context = version switch
             {
                 DnDVersion.V5 => _serviceProvider.GetRequiredService<V5Ctx>(),
                 _ => throw new ArgumentException($"Unsupported DnD version: {version}"),
 
             };
+            context.Database.EnsureCreated();
+
+            return context;
         }
     }
 }
