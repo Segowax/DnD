@@ -1,7 +1,11 @@
-﻿namespace Database.BaseRepository
+﻿using Domain;
+using Microsoft.EntityFrameworkCore;
+
+namespace Database.BaseRepository
 {
-    public interface IBaseRepository<TEntity> 
-        where TEntity : class
+    public interface IBaseRepository<Ctx, TEntity>
+        where Ctx : DbContext
+        where TEntity : Base
     {
         Task<IEnumerable<TEntity>> GetAllAsync();
     }

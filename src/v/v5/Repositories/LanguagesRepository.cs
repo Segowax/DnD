@@ -1,13 +1,14 @@
 ﻿using Database;
 using Database.BaseRepository;
+using Database.v5;
 using Domain;
-using static Common.Constants;
 
 namespace v5.Repositories
 {
-    public sealed class LanguagesRepository : BaseRepository<Languages>, ILanguagesRepository
+    public sealed class LanguagesRepository
+        : BaseRepository<V5Ctx, Languages>, ILanguagesRepository
     {
-        public LanguagesRepository(IDbContextFactory dbContextFactory)
-            : base(dbContextFactory, DnDVersion.V5) { }
+        public LanguagesRepository(IDbContextFactory<V5Ctx> dbContextFactory)
+            : base(dbContextFactory) { }
     }
 }

@@ -1,22 +1,23 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace Database.BaseRepository
 {
-    public abstract class BaseRepository<TEntity>
-        : IBaseRepository<TEntity> where TEntity : class
+    public abstract class BaseRepository<TContext, TEntity>
+        : IBaseRepository<TContext, TEntity>
+        where TContext : DbContext
+        where TEntity : Base
     {
-        private readonly IDbContextFactory _contextFactory;
-        private readonly string _version;
+        private readonly IDbContextFactory<TContext> _contextFactory;
 
-        protected BaseRepository(IDbContextFactory contextFactory, string version)
+        protected BaseRepository(IDbContextFactory<TContext> contextFactory)
         {
             _contextFactory = contextFactory;
-            _version = version;
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            var context = _contextFactory.GetContext(_version);
+            var context = _contextFactory.GetContext();
 
             return await context.Set<TEntity>().ToListAsync();
         }

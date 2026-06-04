@@ -2,8 +2,9 @@
 
 namespace Database
 {
-    public interface IDbContextFactory
+    public interface IDbContextFactory<Ctx>
+        where Ctx : DbContext
     {
-        DbContext GetContext(string version);
+        Ctx GetContext();
     }
 }
