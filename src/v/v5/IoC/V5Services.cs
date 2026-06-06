@@ -1,7 +1,7 @@
 ﻿using Database.IoC;
+using Database.v5;
 using Microsoft.Extensions.DependencyInjection;
 using v5.Repositories;
-using static Common.Constants;
 
 namespace v5.IoC
 {
@@ -9,7 +9,7 @@ namespace v5.IoC
     {
         public static IServiceCollection ConfigureV5(this IServiceCollection services)
         {
-            services.ConfigureDatabase(DnDVersion.V5);
+            services.ConfigureDatabase<V5Ctx>();
             services.AddScoped<ILanguagesRepository, LanguagesRepository>();
 
             return services;
